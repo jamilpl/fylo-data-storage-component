@@ -1,0 +1,205 @@
+:root {
+  /* Primary */
+  --gradient: #ffa399 to #ff4d97;
+
+  /* Neutral */
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--very-dark-blue);
+  background-image: url("../images/bg-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card__actions {
+  max-width: 350px;
+  padding: 4rem;
+  border-radius: 12px 80px 12px 12px;
+  background-color: var(--dark-blue);
+}
+
+.card__logo {
+  width: 140px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.card__buttons {
+  margin-top: 2.8rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.card__button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--very-dark-blue);
+  cursor: pointer;
+}
+
+.card__img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+/* DOWNLOAD */
+
+.card__body {
+  position: relative;
+  background-color: var(--dark-blue);
+  border-radius: 12px;
+  padding: 3rem 4rem 4rem;
+}
+
+.card__paragraph {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--pale-blue);
+}
+
+.card__loading-bar {
+  height: 20px;
+  padding: 4px;
+  margin: 1.5rem 0 0.8rem;
+  border-radius: 20px;
+  background-color: hsl(228deg 55% 18%);
+}
+
+.card__load {
+  width: 80%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    #ffa399,
+    #ff9092,
+    #ff7b90,
+    #ff6591,
+    #ff4d97
+  );
+  border-radius: 20px;
+  padding: 2px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card__load-circle {
+  height: 10px;
+  width: 10px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+}
+
+.card__download-size {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--pale-blue);
+}
+
+.card__download-remaining {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 65%);
+  background-color: #FFFFFF;
+  border-radius: 8px;
+
+  width: 180px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.card__number {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+.card__gb-left {
+  font-size: 1.4rem;
+  color: var(--grayish-blue);
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("../images/bg-desktop.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .card {
+    flex-direction: row;
+  }
+
+  .card__actions {
+    width: 40%;
+    padding: 3.5rem;
+  }
+  
+  .card__body {
+    width: 60%;
+    height: max-content;
+    padding: 3.5rem;
+    align-self: flex-end;
+  }
+
+  .card__paragraph {
+    text-align: left;
+  }
+
+  .card__download-remaining {
+    left: 75%;
+    top: 0;
+    transform: translate(-50%, -65%);
+  }
+
+  .card__download-remaining::after {
+    content: "";
+    position: absolute;
+    top: 62px;
+    right: 0;
+    height: 0;
+    border-top: 30px solid #fff;
+    border-left: 30px solid rgba(0,0,0,0);
+  }
+}

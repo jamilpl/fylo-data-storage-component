@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Fylo data storage component</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main class="main">
+      <section class="card">
+        <div class="card__actions">
+          <div>
+            <img src="./images/logo.svg" alt="" aria-hidden="true" class="card__logo">
+          </div>
+
+          <div class="card__buttons">
+            <button type="button" class="card__button">
+              <img src="./images/icon-document.svg" alt="icon document" class="card__img">
+            </button>
+            <button type="button" class="card__button">
+              <img src="./images/icon-folder.svg" alt="icon folder" class="card__img">
+            </button>
+            <button type="button" class="card__button">
+              <img src="./images/icon-upload.svg" alt="icon upload" class="card__img">
+            </button>
+          </div>
+        </div>
+
+        <div class="card__body">
+          <p class="card__paragraph">You’ve used <strong>815 GB</strong> of your storage</p>
+          
+          <div class="card__loading-bar">
+            <div class="card__load">
+              <span class="card__load-circle"></span>
+            </div>
+          </div>
+
+          <div class="card__download-size">
+            <p>0 GB</p>
+            <p>1000 GB</p>
+          </div>
+
+          <div class="card__download-remaining">
+            <p class="card__number">185 <span class="card__gb-left">GB LEFT</span></p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
